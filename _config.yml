@@ -12,8 +12,8 @@ site_theme               : "default"
 title                    : "Boyao Han"
 title_separator          : "-"
 name                     : &name "Boyao Han"
-description              : &description "Undergraduate at Hunan University | Research Assistant at CUHKSZ"
-url                      : https://boyaohan.github.io
+description              : &description "Boyao Han's academic portfolio"
+url                      : https://BoyaoHan.github.io
 
 baseurl                  : ""
 repository               : "BoyaoHan/BoyaoHan.github.io"
@@ -23,25 +23,25 @@ repository               : "BoyaoHan/BoyaoHan.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "boyaohan.jpg"
+  name             : "Boyao Han"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "I am an undergraduate student (class of 2022) at the College of Computer Science and Electronic Engineering, Hunan University. I am currently a research assistant at the School of Data Science, The Chinese University of Hong Kong, Shenzhen, advised by Prof. Li Jiang. My research interests lie in Embodied AI and Computer Vision, with a focus on Vision-Language-Action / Video-Action Models, 3D Computer Vision, and multimodal learning."
+  location         : "Shenzhen, China"
+  employer         : "The Chinese University of Hong Kong, Shenzhen"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "boyaohan22@gmail.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=YgAVsDAAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
+  orcid            : # URL
   semantic         : # URL
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -51,13 +51,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "BoyaoHan"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
