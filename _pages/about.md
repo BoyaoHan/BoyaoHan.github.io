@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Boyao Han's academic portfolio"
+title: "Boyao Han"
 author_profile: true
 redirect_from: 
   - /about/
