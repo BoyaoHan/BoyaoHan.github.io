@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-<main class="home" id="main">
+<main class="home">
   <header class="home-intro">
     <div class="home-identity">
       <h1>Boyao Han</h1>
