@@ -2,7 +2,6 @@
 layout: home
 permalink: /
 title: "Boyao Han"
-published: true
 excerpt: "Boyao Han is an M.Phil. student at CUHK-Shenzhen working on vision-language-action models, AI agents, and 3D computer vision."
 redirect_from: 
   - /about/
