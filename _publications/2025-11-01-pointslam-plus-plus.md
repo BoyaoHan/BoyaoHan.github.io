@@ -1,12 +1,18 @@
 ---
 title: "PointSLAM++: Robust Dense Neural Gaussian Point Cloud-based SLAM"
+authors: "Xu Wang*, Boyao Han*, Xiaojun Chen, Ying Liu, Ruihui Li"
+equal_contribution: true
 collection: publications
 category: conferences
 permalink: /publication/2026-pointslam-plus-plus
-excerpt: 'PointSLAM++ is an RGB-D SLAM system that combines a hierarchically constrained neural Gaussian representation, progressive pose optimization, and a dynamic neural representation graph to achieve robust, high-precision real-time 3D reconstruction and photorealistic rendering under depth-sensor noise.'
+excerpt: 'PointSLAM++ combines hierarchical neural Gaussians, progressive pose optimization, and adaptive Gaussian density to improve camera tracking and structural consistency under noisy RGB-D input, producing accurate real-time reconstruction and photorealistic rendering.'
 date: 2025-11-01
+display_order: 1
 venue: 'AAAI Conference on Artificial Intelligence (AAAI), Poster'
 paperurl: 'https://arxiv.org/abs/2601.11617'
+media: '/images/publications/pointslam-plus-plus.png'
+media_type: 'image'
+media_alt: 'Overview of the PointSLAM++ framework'
 citation: 'Xu Wang, Boyao Han, Xiaojun Chen, Ying Liu, Ruihui Li. (2026). &quot;PointSLAM++: Robust Dense Neural Gaussian Point Cloud-based SLAM.&quot; <i>AAAI</i>. (Poster).'
 ---
 
@@ -24,4 +30,3 @@ Real-time 3D reconstruction is crucial for robotics and augmented reality, yet c
   year      = {2026}
 }
 ```
-

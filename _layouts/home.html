@@ -1,0 +1,17 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+  <body class="minimal-home">
+    {% include browser-upgrade.html %}
+    {{ content }}
+  </body>
+</html>

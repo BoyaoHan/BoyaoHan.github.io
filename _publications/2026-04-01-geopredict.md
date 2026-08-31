@@ -1,12 +1,19 @@
 ---
 title: "GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation"
+authors: "Jingjing Qian, Boyao Han, Chen Shi, Lei Xiao, Long Yang, Shaoshuai Shi, Li Jiang"
 collection: publications
 category: conferences
 permalink: /publication/2026-geopredict
-excerpt: 'GeoPredict is a geometry-aware VLA framework that injects predictive kinematic trajectories and 3D Gaussian geometry priors as training-time supervision, enabling precise 3D reasoning for robotic manipulation without extra inference cost. It consistently outperforms strong VLA baselines on RoboCasa Human-50, LIBERO, and real-world geometry-intensive tasks.'
+excerpt: 'GeoPredict improves 3D reasoning in VLA manipulation by predicting robot trajectories and future workspace geometry. Its training-only geometric supervision boosts simulated and real-world performance without adding 3D decoding at inference.'
 date: 2026-04-01
-venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Highlight'
+display_order: 3
+venue: 'IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)'
+award: 'Highlight'
 paperurl: 'https://arxiv.org/abs/2512.16811'
+projecturl: 'https://jingjingqian75.github.io/GeoPredict-Page/'
+media: '/images/publications/geopredict-method.png'
+media_type: 'image'
+media_alt: 'Overview of the GeoPredict architecture'
 citation: 'Jingjing Qian, Boyao Han, Chen Shi, Lei Xiao, Long Yang, Shaoshuai Shi, Li Jiang. (2026). &quot;GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation.&quot; <i>CVPR</i>. (Highlight).'
 ---
 
@@ -25,4 +32,3 @@ Vision-Language-Action (VLA) models achieve strong generalization in robotic man
   note      = {Highlight}
 }
 ```
-

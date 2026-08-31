@@ -13,7 +13,7 @@ title                    : "Boyao Han"
 title_separator          : "-"
 name                     : &name "Boyao Han"
 description              : &description "Boyao Han's academic portfolio"
-url                      : https://BoyaoHan.github.io
+url                      : https://boyaohan.github.io
 
 baseurl                  : ""
 repository               : "BoyaoHan/BoyaoHan.github.io"
@@ -26,7 +26,7 @@ author:
   avatar           : "boyaohan.jpg"
   name             : "Boyao Han"
   pronouns         : # example: "she/her"  
-  bio              : "I am an undergraduate student (class of 2022) at the College of Computer Science and Electronic Engineering, Hunan University. I am currently a research assistant at the School of Data Science, The Chinese University of Hong Kong, Shenzhen, advised by Prof. Li Jiang. My research interests lie in Embodied AI and Computer Vision, with a focus on Vision-Language-Action / Video-Action Models, 3D Computer Vision, and multimodal learning."
+  bio              : "M.Phil. student at CUHK-Shenzhen working on vision-language-action models, AI agents, and 3D computer vision."
   location         : "Shenzhen, China"
   employer         : "The Chinese University of Hong Kong, Shenzhen"
   uri              : # URL
@@ -221,33 +221,13 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -255,15 +235,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      published: false
   # _publications
   - scope:
       path: ""
@@ -273,23 +245,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
 # Sass/SCSS
