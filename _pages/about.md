@@ -46,11 +46,6 @@ redirect_from:
     </ul>
   </section>
 
-  <section class="home-section" aria-labelledby="projects-heading">
-    <h2 id="projects-heading">Projects</h2>
-    <p><a href="{{ '/VersaCamVLA.github.io/' | relative_url }}"><strong>VersaCamVLA</strong></a> — Project page. More details coming soon.</p>
-  </section>
-
   <section class="home-section" aria-labelledby="publications-heading">
     <h2 id="publications-heading">Publications</h2>
     {% assign publications = site.publications | sort: "display_order" | reverse %}
@@ -69,17 +64,19 @@ redirect_from:
             </a>
           {% endif %}
           <div class="publication-details">
-            <h3><a href="{{ publication.paperurl }}">{{ publication.title }}</a></h3>
+            <h3><a href="{{ publication.paperurl | default: publication.projecturl }}">{{ publication.title }}</a></h3>
             <p class="publication-authors">
               {{ publication.authors | replace: "Boyao Han", "<strong>Boyao Han</strong>" }}
               {% if publication.equal_contribution %}<span class="publication-note"><sup>*</sup> Equal contribution.</span>{% endif %}
             </p>
-            <p class="publication-venue">
-              {{ publication.venue }}{% if publication.award %}, <span class="publication-award">{{ publication.award }}</span>{% endif %}
-            </p>
+            {% if publication.venue %}
+              <p class="publication-venue">
+                {{ publication.venue }}{% if publication.award %}, <span class="publication-award">{{ publication.award }}</span>{% endif %}
+              </p>
+            {% endif %}
             <p class="publication-summary">{{ publication.excerpt }}</p>
             <p class="publication-links">
-              <a href="{{ publication.paperurl }}">Paper</a>
+              {% if publication.paperurl %}<a href="{{ publication.paperurl }}">Paper</a>{% endif %}
               {% if publication.projecturl %}<a href="{{ publication.projecturl }}">Project</a>{% endif %}
             </p>
           </div>
