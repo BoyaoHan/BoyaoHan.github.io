@@ -9,6 +9,7 @@ date: 2025-10-01
 display_order: 2
 venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2510.03198'
+projecturl: 'https://junchao-cs.github.io/MemoryForcing-demo/'
 media: '/images/publications/memory-forcing.mp4'
 media_type: 'video'
 media_alt: 'Memory Forcing project visualization'
