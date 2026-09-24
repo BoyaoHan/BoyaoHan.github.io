@@ -33,7 +33,7 @@ redirect_from:
         <a href="https://github.com/{{ site.author.github }}">GitHub</a>
       </p>
     </div>
-    <img class="home-portrait" src="{{ '/images/boyaohan.jpg' | relative_url }}" alt="Boyao Han" width="160" height="222">
+    <img class="home-portrait" src="{{ '/images/boyaohan.jpg' | relative_url }}?v=graduation-20260924" alt="Boyao Han" width="160" height="240">
   </header>
 
   <section class="home-section" aria-labelledby="news-heading">
