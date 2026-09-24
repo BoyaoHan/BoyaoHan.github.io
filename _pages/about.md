@@ -46,6 +46,11 @@ redirect_from:
     </ul>
   </section>
 
+  <section class="home-section" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects</h2>
+    <p><a href="{{ '/VersaCamVLA.github.io/' | relative_url }}"><strong>VersaCamVLA</strong></a> — Project page. More details coming soon.</p>
+  </section>
+
   <section class="home-section" aria-labelledby="publications-heading">
     <h2 id="publications-heading">Publications</h2>
     {% assign publications = site.publications | sort: "display_order" | reverse %}
