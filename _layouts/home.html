@@ -10,7 +10,7 @@ layout: compress
     {% include head.html %}
     {% include head/custom.html %}
   </head>
-  <body class="minimal-home">
+  <body class="minimal-home{% if page.project_page %} project-page{% endif %}">
     {% include browser-upgrade.html %}
     {{ content }}
   </body>

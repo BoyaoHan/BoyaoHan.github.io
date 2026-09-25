@@ -1,0 +1,41 @@
+[
+  {
+    "id": "pickcube",
+    "title": "Pick Cube",
+    "description": "Move a cube to the center, then place it in the bowl.",
+    "front": {
+      "video": "/VersaCamVLA.github.io/media/real/pickcube_front_4x_1080p.mp4",
+      "poster": "/VersaCamVLA.github.io/media/real/pickcube_front.jpg"
+    },
+    "back": {
+      "video": "/VersaCamVLA.github.io/media/real/pickcube_back_4x_1080p.mp4",
+      "poster": "/VersaCamVLA.github.io/media/real/pickcube_back.jpg"
+    }
+  },
+  {
+    "id": "stackcube",
+    "title": "Stack Cubes",
+    "description": "Build a three-cube tower through coordinated bimanual actions.",
+    "front": {
+      "video": "/VersaCamVLA.github.io/media/real/stackcube_front_4x_1080p.mp4",
+      "poster": "/VersaCamVLA.github.io/media/real/stackcube_front.jpg"
+    },
+    "back": {
+      "video": "/VersaCamVLA.github.io/media/real/stackcube_back_4x_1080p.mp4",
+      "poster": "/VersaCamVLA.github.io/media/real/stackcube_back.jpg"
+    }
+  },
+  {
+    "id": "inserttube",
+    "title": "Insert Tube",
+    "description": "Hand over a test tube, then align it with the rack.",
+    "front": {
+      "video": "/VersaCamVLA.github.io/media/real/inserttube_front_4x_1080p.mp4",
+      "poster": "/VersaCamVLA.github.io/media/real/inserttube_front.jpg"
+    },
+    "back": {
+      "video": "/VersaCamVLA.github.io/media/real/inserttube_back_4x_1080p.mp4",
+      "poster": "/VersaCamVLA.github.io/media/real/inserttube_back.jpg"
+    }
+  }
+]

@@ -3,16 +3,21 @@ title: "VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation"
 authors: "Boyao Han*, Chen Shi*, Jingjing Qian, Zhuotao Tian, Li Jiang"
 equal_contribution: true
 collection: publications
-category: manuscripts
+category: conferences
 permalink: /publication/2026-versacamvla
 excerpt: 'VersaCamVLA enables pretrained VLA policies to handle varying camera counts and unseen camera poses through a unified scene-token interface. Learned from posed RGB views, its compact scene tokens improve manipulation robustness on RoboTwin, LIBERO, and real robots without explicit 3D reconstruction or novel-view rendering at deployment.'
 date: 2026-09-24
 display_order: 4
+venue: 'Conference on Neural Information Processing Systems (NeurIPS), 2026'
+award: 'Poster'
+link: '/VersaCamVLA.github.io/'
+codeurl: 'https://github.com/BoyaoHan/VersaCamVLA'
+codelabel: 'GitHub'
 projecturl: '/VersaCamVLA.github.io/'
 media: '/images/publications/versacamvla-method.png'
 media_type: 'image'
 media_alt: 'VersaCamVLA framework: scene-token interface learning and scene-token-conditioned VLA policy learning'
-citation: 'Boyao Han, Chen Shi, Jingjing Qian, Zhuotao Tian, Li Jiang. (2026). &quot;VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation.&quot;'
+citation: 'Boyao Han, Chen Shi, Jingjing Qian, Zhuotao Tian, Li Jiang. (2026). &quot;VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation.&quot; <i>Advances in Neural Information Processing Systems (NeurIPS)</i>. (Poster).'
 ---
 
 ## Abstract
@@ -22,10 +27,12 @@ Vision-Language-Action (VLA) models have emerged as powerful foundations for rob
 ## BibTeX
 
 ```bibtex
-@misc{han2026versacamvla,
-  title  = {VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation},
-  author = {Han, Boyao and Shi, Chen and Qian, Jingjing and Tian, Zhuotao and Jiang, Li},
-  year   = {2026},
-  url    = {https://boyaohan.github.io/VersaCamVLA.github.io/}
+@inproceedings{han2026versacamvla,
+  title     = {VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation},
+  author    = {Han, Boyao and Shi, Chen and Qian, Jingjing and Tian, Zhuotao and Jiang, Li},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026},
+  note      = {Poster},
+  url       = {https://boyaohan.github.io/VersaCamVLA.github.io/}
 }
 ```

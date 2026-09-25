@@ -1,0 +1,22 @@
+<div class="simulation-gallery" data-reveal>
+  <div class="sim-demo-grid" id="{{ include.id }}-track" role="region" aria-label="{{ include.description }}" tabindex="0">
+    {% for demo in include.items %}
+      <figure data-title="{{ demo.title | escape }}">
+        <video controls muted loop playsinline preload="none" poster="{{ demo.poster | relative_url }}" width="{{ demo.width }}" height="{{ demo.height }}" aria-label="{{ demo.title }} — RoboTwin synchronized camera views at 4 times speed">
+          <source src="{{ demo.video | relative_url }}" type="video/mp4">
+          <a href="{{ demo.video | relative_url }}">Download {{ demo.title }}</a>.
+        </video>
+        <figcaption><span>{{ demo.title }}</span><span>4&times;</span></figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+  <div class="simulation-controls" hidden>
+    <div class="simulation-selection">
+      <label for="{{ include.id }}-axis">{{ include.label }}</label>
+      <output class="simulation-selected" id="{{ include.id }}-selected" for="{{ include.id }}-axis" aria-live="polite"></output>
+    </div>
+    <input class="simulation-axis" id="{{ include.id }}-axis" type="range" min="0" max="{{ include.items.size | minus: 1 }}" step="1" value="0" list="{{ include.id }}-stops" aria-controls="{{ include.id }}-track">
+    <datalist id="{{ include.id }}-stops">{% for demo in include.items %}<option value="{{ forloop.index0 }}" label="{{ demo.title | escape }}"></option>{% endfor %}</datalist>
+    <div class="simulation-axis-labels" aria-hidden="true"><span>1</span><span>{{ include.items.size }}</span></div>
+  </div>
+</div>

@@ -12,7 +12,6 @@ redirect_from:
   <header class="home-intro">
     <div class="home-identity">
       <h1>Boyao Han</h1>
-      <p class="home-role">M.Phil. Student at CUHK-Shenzhen</p>
       <p>
         I am an M.Phil. student at the
         <a href="https://sds.cuhk.edu.cn/">School of Data Science</a>,
@@ -39,10 +38,10 @@ redirect_from:
   <section class="home-section" aria-labelledby="news-heading">
     <h2 id="news-heading">News</h2>
     <ul class="home-news">
+      <li><time datetime="2026-09">2026.09</time><span><a href="https://arxiv.org/abs/2510.03198">Memory Forcing</a> and <a href="{{ '/VersaCamVLA.github.io/' | relative_url }}">VersaCamVLA</a> were accepted at NeurIPS 2026 (Poster)</span></li>
       <li><time datetime="2026-09">2026.09</time><span>Started my M.Phil. journey at CUHK-Shenzhen!</span></li>
       <li><time datetime="2026-04">2026.04</time><span><a href="https://arxiv.org/abs/2512.16811">GeoPredict</a> was accepted at CVPR 2026 (<span class="publication-award">Highlight</span>).</span></li>
       <li><time datetime="2025-11">2025.11</time><span><a href="https://arxiv.org/abs/2601.11617">PointSLAM++</a> was accepted as a Poster at AAAI 2026.</span></li>
-      <li><time datetime="2025-10">2025.10</time><span><a href="https://arxiv.org/abs/2510.03198">Memory Forcing</a> became available on arXiv.</span></li>
     </ul>
   </section>
 
@@ -53,7 +52,7 @@ redirect_from:
       {% for publication in publications %}
         <article class="home-publication{% if publication.media %} home-publication--with-media{% endif %}">
           {% if publication.media %}
-            <a class="publication-media" href="{{ publication.projecturl | default: publication.paperurl }}" aria-label="View {{ publication.title }}">
+            <a class="publication-media" href="{{ publication.link | default: publication.projecturl | default: publication.paperurl }}" aria-label="View {{ publication.title }}">
               {% if publication.media_type == "video" %}
                 <video autoplay muted loop playsinline preload="metadata" aria-label="{{ publication.media_alt }}">
                   <source src="{{ publication.media | relative_url }}" type="video/mp4">
@@ -64,20 +63,21 @@ redirect_from:
             </a>
           {% endif %}
           <div class="publication-details">
-            <h3><a href="{{ publication.paperurl | default: publication.projecturl }}">{{ publication.title }}</a></h3>
+            <h3><a href="{{ publication.link | default: publication.paperurl | default: publication.projecturl }}">{{ publication.title }}</a></h3>
             <p class="publication-authors">
               {{ publication.authors | replace: "Boyao Han", "<strong>Boyao Han</strong>" }}
               {% if publication.equal_contribution %}<span class="publication-note"><sup>*</sup> Equal contribution.</span>{% endif %}
             </p>
             {% if publication.venue %}
               <p class="publication-venue">
-                {{ publication.venue }}{% if publication.award %}, <span class="publication-award">{{ publication.award }}</span>{% endif %}
+                {{ publication.venue }}{% if publication.award == 'Poster' %}, {{ publication.award }}{% elsif publication.award %}, <span class="publication-award">{{ publication.award }}</span>{% endif %}
               </p>
             {% endif %}
             <p class="publication-summary">{{ publication.excerpt }}</p>
             <p class="publication-links">
               {% if publication.paperurl %}<a href="{{ publication.paperurl }}">Paper</a>{% endif %}
               {% if publication.projecturl %}<a href="{{ publication.projecturl }}">Project</a>{% endif %}
+              {% if publication.codeurl %}<a href="{{ publication.codeurl }}">{{ publication.codelabel | default: 'Code' }}</a>{% endif %}
             </p>
           </div>
         </article>

@@ -23,3 +23,8 @@ package-lock.json
 .DS_Store
 
 CLAUDE.md
+
+# Local cache for verified, accelerated project videos
+scripts/.versacam-media-cache.json
+
+scripts/.versacam-counts-cache.json

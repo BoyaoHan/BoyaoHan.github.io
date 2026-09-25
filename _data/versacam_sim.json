@@ -1,0 +1,134 @@
+[
+  {
+    "id": "stack_blocks_three",
+    "title": "Stack Three Blocks",
+    "duration": 32.5,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/stack_blocks_three_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/stack_blocks_three_multiview_crop.jpg"
+  },
+  {
+    "id": "stack_bowls_three",
+    "title": "Stack Three Bowls",
+    "duration": 34.733333,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/stack_bowls_three_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/stack_bowls_three_multiview_crop.jpg"
+  },
+  {
+    "id": "blocks_ranking_rgb",
+    "title": "Arrange Blocks by Color",
+    "duration": 33.333333,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/blocks_ranking_rgb_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/blocks_ranking_rgb_multiview_crop.jpg"
+  },
+  {
+    "id": "blocks_ranking_size",
+    "title": "Arrange Blocks by Size",
+    "duration": 30.933333,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/blocks_ranking_size_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/blocks_ranking_size_multiview_crop.jpg"
+  },
+  {
+    "id": "open_microwave",
+    "title": "Open Microwave",
+    "duration": 19.366667,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/open_microwave_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/open_microwave_multiview_crop.jpg"
+  },
+  {
+    "id": "open_laptop",
+    "title": "Open Laptop",
+    "duration": 15.6,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/open_laptop_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/open_laptop_multiview_crop.jpg"
+  },
+  {
+    "id": "place_burger_fries",
+    "title": "Place Burger and Fries",
+    "duration": 16.433333,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/place_burger_fries_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/place_burger_fries_multiview_crop.jpg"
+  },
+  {
+    "id": "place_empty_cup",
+    "title": "Place Empty Cup",
+    "duration": 9.733333,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/place_empty_cup_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/place_empty_cup_multiview_crop.jpg"
+  },
+  {
+    "id": "place_object_basket",
+    "title": "Place Object in Basket",
+    "duration": 24.766667,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/place_object_basket_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/place_object_basket_multiview_crop.jpg"
+  },
+  {
+    "id": "move_stapler_pad",
+    "title": "Move Stapler onto Pad",
+    "duration": 11.466667,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/move_stapler_pad_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/move_stapler_pad_multiview_crop.jpg"
+  },
+  {
+    "id": "pick_diverse_bottles",
+    "title": "Pick Diverse Bottles",
+    "duration": 8.233333,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/pick_diverse_bottles_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/pick_diverse_bottles_multiview_crop.jpg"
+  },
+  {
+    "id": "place_a2b_left",
+    "title": "Place A to B — Left",
+    "duration": 11.866667,
+    "playback_speed": 4,
+    "view": "multiview",
+    "width": 1920,
+    "height": 1488,
+    "video": "/VersaCamVLA.github.io/media/simulation/place_a2b_left_multiview_crop_4x.mp4",
+    "poster": "/VersaCamVLA.github.io/media/simulation/place_a2b_left_multiview_crop.jpg"
+  }
+]

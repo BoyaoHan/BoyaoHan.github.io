@@ -1,59 +1,163 @@
 ---
 layout: home
-title: "VersaCamVLA"
+project_page: true
+title: "VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation"
 permalink: /VersaCamVLA.github.io/
-excerpt: "VersaCamVLA project page. More details coming soon."
+excerpt: "VersaCamVLA learns a unified scene-token interface for robotic manipulation across changing camera counts and camera poses."
+header:
+  image: https://boyaohan.github.io/VersaCamVLA.github.io/media/stackcube_camera_configurations_4x.jpg
 ---
 
-<a class="project-skip" href="#overview">Skip to content</a>
-<nav class="project-nav" aria-label="Project sections">
-  <div class="project-nav-inner">
-    <a class="project-brand" href="#overview">VersaCamVLA</a>
-    <div class="project-nav-links">
-      <a href="#video">Video</a>
+<nav class="paper-nav" aria-label="Project sections">
+  <div class="paper-nav-inner">
+    <a class="paper-nav-brand" href="#top">VersaCamVLA</a>
+    <div class="paper-nav-links">
+      <a href="#abstract">Abstract</a>
       <a href="#method">Method</a>
-      <a href="#data">Data</a>
       <a href="#results">Results</a>
-      <a href="#citation">Citation</a>
+      <a href="#simulation">Camera Pose</a>
+      <a href="#camera-count">Camera Count</a>
+      <a href="#demos">Real-world</a>
     </div>
   </div>
 </nav>
 
 <main class="home project-home">
-  <header class="project-hero" id="overview" tabindex="-1">
-    <p class="project-eyebrow">Project page</p>
-    <h1>VersaCamVLA</h1>
-    <p>More details coming soon.</p>
-    <a class="project-home-link" href="{{ '/' | relative_url }}">&larr; {{ site.name }}'s homepage</a>
+  <header class="paper-header" id="top">
+    <h1><span>Versa<span class="paper-title-cam">Cam</span>VLA</span>Camera-Configurable VLA Policies for Robotic Manipulation</h1>
+    <p class="paper-authors">
+      <span><a href="{{ '/' | relative_url }}">Boyao Han</a><sup>1,2*</sup></span>
+      <span>Chen Shi<sup>1*</sup></span>
+      <span>Jingjing Qian<sup>1</sup></span>
+      <span><a href="https://zhuotaotian.github.io/">Zhuotao Tian</a><sup>2,3</sup></span>
+      <span><a href="https://llijiang.github.io/">Li Jiang</a><sup>1,2&dagger;</sup></span>
+    </p>
+    <div class="paper-affiliations">
+      <div class="affiliation-row"><span><sup>1</sup> <span class="affiliation-full">The Chinese University of Hong Kong, Shenzhen</span><abbr class="affiliation-short" title="The Chinese University of Hong Kong, Shenzhen">CUHK-Shenzhen</abbr></span></div>
+      <div class="affiliation-row"><span><sup>2</sup> <span class="affiliation-full">Shenzhen Loop Area Institute</span><abbr class="affiliation-short" title="Shenzhen Loop Area Institute">SLAI</abbr></span><span><sup>3</sup> <span class="affiliation-full">Harbin Institute of Technology, Shenzhen</span><abbr class="affiliation-short" title="Harbin Institute of Technology, Shenzhen">HIT-Shenzhen</abbr></span></div>
+    </div>
+    <p class="paper-contribution">* Equal contribution &nbsp;&nbsp; &dagger; Corresponding author</p>
+    <div class="paper-links">
+      <a class="paper-github" href="https://github.com/BoyaoHan/VersaCamVLA"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.55.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.33-3.76-1.33-.51-1.28-1.24-1.62-1.24-1.62-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.61 1.21 3.25.92.1-.72.39-1.21.71-1.49-2.48-.28-5.08-1.24-5.08-5.49 0-1.21.43-2.2 1.14-2.98-.11-.28-.5-1.42.11-2.95 0 0 .93-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.6 1.53.22 2.67.11 2.95.71.78 1.14 1.77 1.14 2.98 0 4.26-2.6 5.21-5.09 5.48.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>GitHub</a>
+      <a class="paper-github" href="{{ '/VersaCamVLA.github.io/VersaCamVLA.pdf' | relative_url }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Paper</a>
+    </div>
   </header>
 
-  <!-- Replace these placeholders with project content; keep the IDs for shared links. -->
-  <section class="home-section project-section" id="video" aria-labelledby="video-heading">
-    <h2 id="video-heading">Video</h2>
-    <p>Project video coming soon.</p>
+  <section class="paper-section paper-abstract" id="abstract" aria-labelledby="abstract-title" data-reveal>
+    <h2 id="abstract-title">Abstract</h2>
+    <p>Vision-language-action (VLA) policies are powerful foundations for robotic manipulation, but they often depend on a fixed camera configuration. Changing a camera's position or adding a new view can disrupt the visual interface learned during training. We introduce <strong>VersaCamVLA</strong>, a camera-configurable framework that decouples camera-set representation from action learning. A unified scene-token interface maps a variable set of calibrated RGB views into a fixed-size representation. Multi-signal target-view prediction preserves visual and spatial structure, while Wrist-Augmented Pose Sampling uses natural wrist-camera motion to provide viewpoint diversity. A lightweight spatial encoder then supplies compact scene tokens to a pretrained VLA as an additional visual condition. At deployment, the policy requires neither explicit 3D reconstruction nor novel-view rendering. Experiments on RoboTwin 2.0, LIBERO, and a real dual-arm robot demonstrate robust manipulation across unseen camera poses and different numbers of input views.</p>
   </section>
 
-  <section class="home-section project-section" id="method" aria-labelledby="method-heading">
-    <h2 id="method-heading">Method</h2>
-    <p>Method overview coming soon.</p>
+  <figure class="paper-teaser" id="teaser" data-reveal>
+    <video controls muted loop playsinline preload="none" poster="{{ '/VersaCamVLA.github.io/media/stackcube_camera_configurations_4x.jpg' | relative_url }}" width="1920" height="1584" aria-label="StackCube with 3, 4, 5, and 6 cameras at 4 times speed">
+      <source src="{{ '/VersaCamVLA.github.io/media/stackcube_camera_configurations_4x.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/VersaCamVLA.github.io/media/stackcube_camera_configurations_4x.mp4' | relative_url }}">Watch StackCube with different camera configurations</a>.
+    </video>
+    <figcaption>VersaCamVLA handles different camera configurations, including varying camera counts and poses.</figcaption>
+  </figure>
+
+  <section class="paper-section paper-method" id="method" aria-labelledby="method-title" data-reveal>
+    <h2 id="method-title">Method</h2>
+    <figure class="method-figure">
+      <a href="{{ '/VersaCamVLA.github.io/figures/method.png' | relative_url }}" aria-label="View the full-resolution method figure"><img src="{{ '/VersaCamVLA.github.io/figures/method.png' | relative_url }}" alt="VersaCamVLA first learns a scene-token interface from multi-view RGB and camera geometry, then conditions a pretrained VLA with compact scene tokens." width="2215" height="1242" loading="lazy" decoding="async"></a>
+      <figcaption>Scene representation learning and policy learning are separated by a fixed-size scene-token interface.</figcaption>
+    </figure>
+    <div class="method-description">
+      <p><strong>Learning a camera-configurable representation.</strong> A scene encoder combines RGB observations and camera rays into shared scene tokens. A training-only decoder predicts RGB, semantic, and edge targets across available views. Wrist-Augmented Pose Sampling varies the source camera subset, using wrist motion to broaden pose coverage within existing demonstrations.</p>
+      <p><strong>Connecting scene tokens to actions.</strong> The pretrained scene encoder is frozen and its decoder removed. A lightweight spatial encoder compresses the representation into 192 supplementary tokens for &pi;<sub>0.5</sub>, alongside the policy's native visual, language, and proprioceptive inputs. The scene-token pathway supports varying camera counts while preserving a consistent input size for the action policy.</p>
+    </div>
   </section>
 
-  <section class="home-section project-section" id="data" aria-labelledby="data-heading">
-    <h2 id="data-heading">Data</h2>
-    <p>Data details coming soon.</p>
+  <section class="paper-section paper-results" id="results" aria-labelledby="results-title" data-reveal>
+    <h2 id="results-title">Results</h2>
+    <p class="section-intro">Benchmark performance and camera-configuration results from the paper. All values are task success rates (%).</p>
+    {% assign results = site.data.versacam_results %}
+    <div class="result-block">
+      <h3>Benchmark performance</h3>
+      <p class="result-caption" id="benchmark-table-caption"><strong>Table 1. Simulation results on RoboTwin 2.0.</strong> Clean and domain-randomized (DR) settings across 16 tasks. Bold indicates the best performance in each column.</p>
+      <p class="table-scroll-note">Scroll horizontally to see all columns.</p>
+      <div class="result-table-wrap" role="region" aria-label="Table 1: RoboTwin benchmark results" tabindex="0">
+        <table class="benchmark-table" aria-labelledby="benchmark-table-caption">
+          <thead>
+            <tr><th scope="col" rowspan="2">Task</th>{% for method in results.benchmark.methods %}<th scope="colgroup" colspan="2"{% if forloop.last %} class="result-ours"{% endif %}>{{ method | replace: 'VersaCamVLA', 'VersaCam<wbr>VLA' }}</th>{% endfor %}</tr>
+            <tr>{% for method in results.benchmark.methods %}{% assign ours = forloop.last %}{% for condition in results.benchmark.conditions %}<th scope="col"{% if ours %} class="result-ours"{% endif %}>{{ condition }}</th>{% endfor %}{% endfor %}</tr>
+          </thead>
+          <tbody>
+            {% for row in results.benchmark.rows %}
+              <tr{% if forloop.last %} class="result-average"{% endif %}>
+                <th scope="row">{{ row.task }}</th>
+                {% for value in row.values %}{% assign column = forloop.index0 %}<td{% if column >= 10 %} class="result-ours"{% endif %}>{% if row.bold[column] %}<strong>{{ value }}</strong>{% else %}{{ value }}{% endif %}</td>{% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="result-block result-block-pose">
+      <h3>Robustness to camera-pose variations</h3>
+      <p class="result-caption" id="camera-pose-table-caption"><strong>Table 2. Robustness to camera-pose variations.</strong> On RoboTwin 2.0, both policies are trained under the nominal camera setup and evaluated with camera poses perturbed in azimuth, distance, and pitch over a workspace-centered spherical region, probing generalization to unseen viewpoints.</p>
+      <div class="result-table-wrap" role="region" aria-label="Table 2: camera-pose robustness" tabindex="0">
+        <table class="camera-pose-table" aria-labelledby="camera-pose-table-caption">
+          <thead>
+            <tr><th scope="col" rowspan="2">Method</th>{% for group in results.pose.groups limit:1 %}<th scope="colgroup" colspan="{{ group.columns.size }}">{{ group.name }}</th>{% endfor %}</tr>
+            <tr>{% for group in results.pose.groups limit:1 %}{% for column in group.columns %}<th scope="col">{{ column }}</th>{% endfor %}{% endfor %}</tr>
+          </thead>
+          <tbody>
+            {% for row in results.pose.rows %}
+              <tr{% if row.method == 'VersaCamVLA' %} class="ours-row"{% endif %}><th scope="row">{{ row.method }}</th>{% for value in row.values limit:2 %}{% assign column = forloop.index0 %}<td>{% if row.bold[column] %}<strong>{{ value }}</strong>{% else %}{{ value }}{% endif %}</td>{% endfor %}</tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="result-block result-block-count">
+      <h3>Flexibility across input camera counts</h3>
+      <p class="result-caption" id="camera-count-table-caption"><strong>Table 3. Effect of input camera count.</strong> On RoboTwin 2.0 <em>Clean</em>, we train two &pi;<sub>0.5</sub> baselines separately with 3 and 4 views and a single VersaCamVLA policy. We evaluate VersaCamVLA with 3, 4, 5, and 6 input views and each &pi;<sub>0.5</sub> baseline at its matched view count, keeping camera viewpoints aligned during testing to isolate the effect of camera count.</p>
+      <div class="result-table-wrap" role="region" aria-label="Table 3: input camera count" tabindex="0">
+        <table class="camera-count-table" aria-labelledby="camera-count-table-caption">
+          <thead>
+            <tr><th scope="col" rowspan="2">Method</th>{% for group in results.count.groups limit:1 %}<th scope="colgroup" colspan="{{ group.columns.size }}">{{ group.name }}</th>{% endfor %}</tr>
+            <tr>{% for group in results.count.groups limit:1 %}{% for column in group.columns %}<th scope="col">{{ column }}</th>{% endfor %}{% endfor %}</tr>
+          </thead>
+          <tbody>
+            {% for row in results.count.rows %}
+              <tr{% if row.method == 'VersaCamVLA' %} class="ours-row"{% endif %}><th scope="row">{{ row.method }}</th>{% for value in row.values limit:4 %}{% assign column = forloop.index0 %}<td>{% if value == nil %}<span aria-label="Not reported">&times;</span>{% elsif row.bold[column] %}<strong>{{ value }}</strong>{% else %}{{ value }}{% endif %}</td>{% endfor %}</tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="result-note">V denotes input views; &times; denotes settings not reported.</p>
+    </div>
   </section>
 
-  <section class="home-section project-section" id="results" aria-labelledby="results-heading">
-    <h2 id="results-heading">Results</h2>
-    <p>Results and demonstrations coming soon.</p>
+  <section class="paper-section paper-demos" id="simulation" aria-labelledby="simulation-title">
+    <h2 id="simulation-title" data-reveal>Camera Pose</h2>
+    <p class="demo-intro" data-reveal>RoboTwin policy executions at 4&times; speed. Head, left wrist, right wrist, and Agent views are synchronized across the top row, above a close-up third-person view. The moving camera and its trajectory are shown in red.</p>
+    {% include versacam-gallery.html items=site.data.versacam_sim id="simulation" label="Choose a task" description="Camera-pose demonstrations" %}
+  </section>
+  <section class="paper-section paper-demos" id="camera-count" aria-labelledby="camera-count-title">
+    <h2 id="camera-count-title" data-reveal>Camera Count</h2>
+    <p class="demo-intro" data-reveal>One policy with 3, 4, 5, or 6 input cameras. The input views appear above the cropped third-person execution. Colored trajectories identify the additional external cameras. All videos are shown at 4&times; speed.</p>
+    {% include versacam-count-gallery.html %}
   </section>
 
-  <section class="home-section project-section" id="citation" aria-labelledby="citation-heading">
-    <h2 id="citation-heading">Citation</h2>
-    <p>Citation details coming soon.</p>
+  <section class="paper-section paper-demos" id="demos" aria-labelledby="real-world-title">
+    <h2 id="real-world-title" data-reveal>Real-world</h2>
+    <p class="demo-intro" data-reveal>Front-view recordings of three bimanual tasks, shown at 4&times; speed.</p>
+    <div class="real-demo-grid" data-reveal>
+      {% for task in site.data.versacam_real %}
+        <figure>
+          <video controls muted loop playsinline preload="none" poster="{{ task.front.poster | relative_url }}" width="1920" height="1080" aria-label="{{ task.title }} — Front recording at 4 times speed">
+            <source src="{{ task.front.video | relative_url }}" type="video/mp4">
+            <a href="{{ task.front.video | relative_url }}">Download {{ task.title }}</a>.
+          </video>
+          <figcaption><span>{{ task.title }}</span><span>Front</span></figcaption>
+        </figure>
+      {% endfor %}
+    </div>
   </section>
-
-  <footer class="home-footer">
-    <p><a href="{{ '/' | relative_url }}">{{ site.name }}</a> &middot; <a href="#overview">Back to top &uarr;</a></p>
-  </footer>
+  <footer class="paper-footer">VersaCamVLA &middot; <a href="{{ '/' | relative_url }}">Boyao Han</a></footer>
 </main>
+<script src="{{ '/assets/js/versacam-gallery.js' | relative_url }}" defer></script>

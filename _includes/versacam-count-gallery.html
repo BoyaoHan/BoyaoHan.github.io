@@ -1,0 +1,28 @@
+{% assign tasks = site.data.versacam_counts | group_by: 'task' %}
+<div class="camera-count-gallery" data-reveal>
+  <div id="camera-count-panels">
+    {% for task in tasks %}
+      <div class="camera-count-grid" data-title="{{ task.items.first.task_title | escape }}" role="group" aria-label="{{ task.items.first.task_title | escape }}: 3, 4, 5, and 6 cameras"{% unless forloop.first %} hidden{% endunless %}>
+        {% assign configurations = task.items | sort: 'camera_count' %}
+        {% for demo in configurations %}
+          <figure>
+            <video controls muted loop playsinline preload="none" poster="{{ demo.poster | relative_url }}" width="{{ demo.width }}" height="{{ demo.height }}" aria-label="{{ demo.title | escape }} at 4 times speed">
+              <source src="{{ demo.video | relative_url }}" type="video/mp4">
+              <a href="{{ demo.video | relative_url }}">Download {{ demo.title }}</a>.
+            </video>
+            <figcaption><span>{{ demo.camera_count }} cameras</span><span>4&times;</span></figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="simulation-controls" hidden>
+    <div class="simulation-selection">
+      <label for="camera-count-axis">Choose a task</label>
+      <output class="simulation-selected" for="camera-count-axis" aria-live="polite"></output>
+    </div>
+    <input class="simulation-axis" id="camera-count-axis" type="range" min="0" max="{{ tasks.size | minus: 1 }}" step="1" value="0" list="camera-count-stops" aria-controls="camera-count-panels">
+    <datalist id="camera-count-stops">{% for task in tasks %}<option value="{{ forloop.index0 }}" label="{{ task.items.first.task_title | escape }}"></option>{% endfor %}</datalist>
+    <div class="simulation-axis-labels camera-count-task-labels" aria-hidden="true">{% for task in tasks %}<span>{{ task.items.first.task_title }}</span>{% endfor %}</div>
+  </div>
+</div>
