@@ -150,8 +150,8 @@ header:
       {% for task in site.data.versacam_real %}
         <figure>
           <video controls muted loop playsinline preload="none" poster="{{ task.front.poster | relative_url }}" width="1920" height="1080" aria-label="{{ task.title }} — Front recording at 4 times speed">
-            <source src="{{ task.front.video | relative_url }}" type="video/mp4">
-            <a href="{{ task.front.video | relative_url }}">Download {{ task.title }}</a>.
+            <source src="{{ task.front.video | relative_url }}?v=silent-20261005" type="video/mp4">
+            <a href="{{ task.front.video | relative_url }}?v=silent-20261005">Download {{ task.title }}</a>.
           </video>
           <figcaption><span>{{ task.title }}</span><span>Front</span></figcaption>
         </figure>

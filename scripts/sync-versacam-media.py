@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import verified demonstrations; compose cropped RoboTwin multiview videos at 4x.
+"""Import silent real demonstrations; compose cropped RoboTwin multiview videos at 4x.
 
 python3 scripts/sync-versacam-media.py --real-dir PATH --simulation-dir PATH
 Only completed successful simulations are published; rerun as more finish.
@@ -232,6 +232,16 @@ def import_media(real_root, simulation_root, destination):
             task["duration"] = cache[key]["duration"]
             write_changed(cache_path, cache)
             changed += count
+        elif target.parent.name == "real" and source.suffix == ".mp4":
+            target.parent.mkdir(parents=True, exist_ok=True)
+            with tempfile.TemporaryDirectory(dir=target.parent) as directory:
+                silent = Path(directory) / target.name
+                subprocess.run(["ffmpeg", "-v", "error", "-nostdin", "-y", "-i", str(source),
+                                "-map", "0:v:0", "-c:v", "copy", "-an", "-movflags", "+faststart",
+                                str(silent)], check=True)
+                if fingerprint(source) != check:
+                    raise ValueError(f"Source changed during import: {source.name}; rerun the importer")
+                changed += copy_changed(silent, target, fingerprint(silent))
         else:
             changed += copy_changed(source, target, check)
     for path, data in manifests:
