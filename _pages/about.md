@@ -38,7 +38,7 @@ redirect_from:
   <section class="home-section" aria-labelledby="news-heading">
     <h2 id="news-heading">News</h2>
     <ul class="home-news">
-      <li><time datetime="2026-09">2026.09</time><span><a href="https://arxiv.org/abs/2510.03198">Memory Forcing</a> and <a href="{{ '/VersaCamVLA.github.io/' | relative_url }}">VersaCamVLA</a> were accepted at NeurIPS 2026 (Poster)</span></li>
+      <li><time datetime="2026-09">2026.09</time><span><a href="https://arxiv.org/abs/2510.03198">Memory Forcing</a> and <a href="https://arxiv.org/abs/2610.12451">VersaCamVLA</a> were accepted at NeurIPS 2026 (Poster)</span></li>
       <li><time datetime="2026-09">2026.09</time><span>Started my M.Phil. journey at CUHK-Shenzhen!</span></li>
       <li><time datetime="2026-04">2026.04</time><span><a href="https://arxiv.org/abs/2512.16811">GeoPredict</a> was accepted at CVPR 2026 (<span class="publication-award">Highlight</span>).</span></li>
       <li><time datetime="2025-11">2025.11</time><span><a href="https://arxiv.org/abs/2601.11617">PointSLAM++</a> was accepted as a Poster at AAAI 2026.</span></li>

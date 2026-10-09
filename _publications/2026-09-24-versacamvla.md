@@ -10,6 +10,7 @@ date: 2026-09-24
 display_order: 4
 venue: 'Conference on Neural Information Processing Systems (NeurIPS), 2026'
 award: 'Poster'
+paperurl: 'https://arxiv.org/abs/2610.12451'
 link: '/VersaCamVLA.github.io/'
 codeurl: 'https://github.com/BoyaoHan/VersaCamVLA'
 codelabel: 'GitHub'
@@ -33,6 +34,9 @@ Vision-Language-Action (VLA) models have emerged as powerful foundations for rob
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   year      = {2026},
   note      = {Poster},
-  url       = {https://boyaohan.github.io/VersaCamVLA.github.io/}
+  eprint    = {2610.12451},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url       = {https://arxiv.org/abs/2610.12451}
 }
 ```
