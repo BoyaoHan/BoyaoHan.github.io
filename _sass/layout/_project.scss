@@ -96,6 +96,9 @@
 .camera-count-task-labels span { flex: 1; text-align: center; }
 .camera-count-task-labels span:first-child { flex: .5; text-align: left; }
 .camera-count-task-labels span:last-child { flex: .5; text-align: right; }
+.paper-bibtex { max-width: 1080px; margin: 0 auto; }
+.paper-bibtex pre { margin: 16px 0 0; padding: 20px; border: 1px solid #e1e5e9; border-radius: 5px; background: #f4f6f8; font-size: 13px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; }
+.paper-bibtex code { color: #282c31; -webkit-user-select: all; user-select: all; }
 .paper-footer { margin: 0; padding: 24px 0 35px; border-top: 1px solid #eee; text-align: center; }
 
 @media (max-width: 900px) {
