@@ -8,8 +8,21 @@ redirect_from:
   - /about.html
 ---
 
+<nav class="home-nav" aria-label="Homepage sections">
+  <div class="home-nav-inner">
+    <a class="home-nav-brand" href="#about">Boyao Han</a>
+    <div class="home-nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+    </div>
+  </div>
+</nav>
+
 <main class="home">
-  <header class="home-intro">
+  <header class="home-intro" id="about">
     <div class="home-identity">
       <h1>Boyao Han</h1>
       <p>
@@ -35,7 +48,7 @@ redirect_from:
     <img class="home-portrait" src="{{ '/images/boyaohan.jpg' | relative_url }}?v=graduation-20260924" alt="Boyao Han" width="160" height="240">
   </header>
 
-  <section class="home-section" aria-labelledby="news-heading">
+  <section class="home-section" id="news" aria-labelledby="news-heading">
     <h2 id="news-heading">News</h2>
     <ul class="home-news">
       <li><time datetime="2026-09">2026.09</time><span><a href="https://arxiv.org/abs/2510.03198">Memory Forcing</a> and <a href="https://arxiv.org/abs/2610.12451">VersaCamVLA</a> were accepted at NeurIPS 2026 (Poster)</span></li>
@@ -45,7 +58,7 @@ redirect_from:
     </ul>
   </section>
 
-  <section class="home-section" aria-labelledby="publications-heading">
+  <section class="home-section" id="publications" aria-labelledby="publications-heading">
     <h2 id="publications-heading">Publications</h2>
     {% assign publications = site.publications | sort: "display_order" | reverse %}
     <div class="home-publications">
@@ -85,7 +98,7 @@ redirect_from:
     </div>
   </section>
 
-  <section class="home-section" aria-labelledby="experience-heading">
+  <section class="home-section" id="experience" aria-labelledby="experience-heading">
     <h2 id="experience-heading">Research Experience</h2>
     <div class="experience-list">
       <article class="experience-item">
@@ -115,7 +128,7 @@ redirect_from:
     </div>
   </section>
 
-  <section class="home-section" aria-labelledby="education-heading">
+  <section class="home-section" id="education" aria-labelledby="education-heading">
     <h2 id="education-heading">Education</h2>
     <div class="education-list">
       <article class="education-item">
