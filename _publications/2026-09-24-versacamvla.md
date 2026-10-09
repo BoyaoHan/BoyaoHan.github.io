@@ -33,7 +33,6 @@ Vision-Language-Action (VLA) models have emerged as powerful foundations for rob
   author    = {Han, Boyao and Shi, Chen and Qian, Jingjing and Tian, Zhuotao and Jiang, Li},
   booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
   year      = {2026},
-  note      = {Poster},
   eprint    = {2610.12451},
   archivePrefix = {arXiv},
   primaryClass = {cs.CV},
